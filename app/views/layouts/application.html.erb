@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scheduleapp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="header_block">
+        <ul class="title_block">
+          <li class="clock_block">
+            <img class="clock" src="https://www.salhouse.com/illustration/wp-content/uploads/2019/07/steampunk-clipart-cool-clock-508x590.jpg">
+          </li>
+          <li class="text_block">
+            <p class="text">Yumi's schedule</p>
+          </li>
+          <li class="cat_block">
+            <img class="cat" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5Ap-7kmJNEXpKI9EC3uqOJjztID_Swty9Eg&usqp=CAU">
+          </li>
+        </ul>
+      </div>
+    </header>
+    
+    <%= yield %>
+  </body>
+</html>
+
+<link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Dancing+Script:wght@600&family=Great+Vibes&family=Satisfy&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Dancing+Script:wght@600&family=Great+Vibes&family=Satisfy&display=swap" rel="stylesheet">

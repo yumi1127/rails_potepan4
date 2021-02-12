@@ -1,0 +1,39 @@
+<div class="wholepage">
+<ul>
+  <li class="title"><h2>Schedule edit</h2></li>
+  <li class="link"><%= link_to"Go back", :schedules %></li>
+</ul>
+
+
+<%= form_for @schedule do |f| %>
+  <table>
+    <tr>
+      <th><%= f.label :title,"title" %></th>
+      <td><%= f.text_field :title %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :startdate,"startdate" %></th>
+      <td><%= f.date_select :startdate %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :enddate,"enddate" %></th>
+      <td><%= f.date_select :enddate %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :allday,"allday" %></th>
+      <td><%= f.check_box :allday %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :memo,"memo" %></th>
+      <td><%= f.text_area :memo %></td>
+    </tr>
+  </table>
+  
+  <div>
+    <ul>
+      <li><%= f.submit "Editing completed" %></li>
+    </ul>
+  </div>
+<% end %>
+
+</div>

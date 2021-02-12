@@ -1,0 +1,33 @@
+<div class="wholepage">
+
+<ul>
+  <li class="title"><h2>Schedule reference</h2></li>
+  <li class="link brunk"><%= link_to"Go back", :schedules %></li>
+  <li class="link brunk"><%= link_to"Edit", :schedules %></li>
+  <li class="link brunk"><%= link_to"Delete", :schedules %></li>
+</ul>
+
+
+<table>
+  <tr>
+    <th>title</th>
+    <td><%= @schedule.title %></td>
+  </tr>
+  <tr>
+    <th>start date</th>
+    <td><%= @schedule.startdate %></td>
+  </tr>
+  <tr>
+    <th>end date</th>
+    <td><%= @schedule.enddate %></td>
+  </tr>
+  <tr>
+    <th>allday</th>
+    <td><%= @schedule.allday %></td>
+  </tr>
+  <tr>
+    <th>memo</th>
+    <td><%= @schedule.memo %></td>
+  </tr>
+</table>
+</div>

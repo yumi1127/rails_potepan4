@@ -1,0 +1,2 @@
+class AddTitleToSchedule < ApplicationRecord
+end

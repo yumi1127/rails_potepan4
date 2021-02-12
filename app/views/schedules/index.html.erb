@@ -1,0 +1,45 @@
+<div class="wholepage">
+  
+<% if flash.notice %>
+  <p class="notice"><%= flash.notice %></p>
+<% end %>
+  
+<ul>
+  <li class="title"><h1>All schedules</h1></li>
+
+  <li class="link"><%= link_to "Create new schedule", :new_schedule %></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>title</th>
+      <th>start date</th>
+      <th>end date</th>
+      <th>all day</th>
+      <th>update time</th>
+      <th>reference</th>
+      <th>edit</th>
+      <th>delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @schedules.each do |schedule| %>
+      <tr>
+        <td><%= schedule.id %></td>
+        <td><%= schedule.title %></td>
+        <td><%= schedule.startdate %></td>
+        <td><%= schedule.enddate %></td>
+        <td><%= schedule.allday %></td>
+        <td><%= schedule.updated_at.to_s(:datetime_jp) %></td>
+        <td><%= link_to image_tag("https://illustimage.com/photo/thum/10765.png", class:"glasses"), schedule %></td>
+        <td><%= link_to image_tag("http://plusnews100.com/purapura/wp-content/uploads/2017/12/062%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC.jpg", class:"pencil"), [:edit, schedule] %></td>
+        <td><%= link_to image_tag("https://previews.123rf.com/images/arhimicrostok/arhimicrostok1708/arhimicrostok170805616/85008488-%E3%82%B4%E3%83%9F%E7%AE%B1%E3%81%AE%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%80%82%E5%89%8A%E9%99%A4%E3%80%81%E3%82%B4%E3%83%9F%E7%AE%B1%E3%81%AB%E7%A7%BB%E5%8B%95%E3%80%81%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF%E9%A0%98%E5%9F%9F%E3%82%92%E3%82%AF%E3%83%AA%E3%82%A2%E3%81%97%E3%81%BE%E3%81%99%E3%80%82%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%E3%80%82.jpg", class:"trash"), schedule, method: :delete, data:{confirm: "You really delete the schedule??"} %></td>
+      </tr>
+    <% end %>
+
+  </tbody>
+  
+</table>
+</div>
